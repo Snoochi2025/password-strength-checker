@@ -1,3 +1,5 @@
+import secrets
+import string
 print("=========================")
 print("PASSWORD STRENGTH CHECKER")
 print("=========================")
