@@ -15,3 +15,7 @@ if any(char.isupper() for char in password):
 if any(char.islower() for char in password):
     print("Password contains a lowercase!")
 else:print("Password needs a lowercase letter")  
+special_characters = "!@#$%^&*()-_=+[]{};:,.<>?/"
+if any(char in special_characters for char in password):
+    print("password contains a special character")
+else:print("Password needs a special character!")
