@@ -9,7 +9,7 @@ if any(char.isdigit() for char in password):
 else:
     print("Password needs a number!")
 if any(char.isupper() for char in password):
-    print("Password contains an uppercase!)
+    print("Password contains an uppercase!")
           else:
     print("Password needs an uppercase letter")
 if any(char.islower() for char in password):
