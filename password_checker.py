@@ -1,1 +1,1 @@
-
+print("Password Strength Checker")
