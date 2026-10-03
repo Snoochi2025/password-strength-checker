@@ -2,6 +2,22 @@ print("=========================")
 print("PASSWORD STRENGTH CHECKER")
 print("=========================")
 password = input("Enter a password: ")
+common_passwords = [
+    "password",
+    "password123",
+    "12345678",
+    "qwerty",
+    "qwerty123",
+    "letmein",
+    "welcome",
+    "admin123",
+    "abc123"
+    "pass@123"
+]
+if password.lower() in common_passwords:
+    print("⚠️ Warning: This is a commonly used password!")
+else:
+    print("This password was not found in the common password list.")
 if len(password) >= 8:
     print("Password is long enough!")
 else:
