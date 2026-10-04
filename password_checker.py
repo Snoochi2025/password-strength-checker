@@ -36,6 +36,8 @@ def generate_password(length=12):
     for _ in range(length - 4):
         password += secrets.choice(characters)
     return password
+common_password = password.lower() in common_passwords
+
 if password.lower() in common_passwords:
     print("⚠️ Warning: This is a commonly used password!")
 else:
