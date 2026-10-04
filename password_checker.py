@@ -16,6 +16,14 @@ common_passwords = [
     "abc123"
     "pass@123"
 ]
+def generate_password(length=12):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ""
+
+    for _ in range(length):
+        password += secrets.choice(characters)
+
+    return password
 if password.lower() in common_passwords:
     print("⚠️ Warning: This is a commonly used password!")
 else:
@@ -64,3 +72,4 @@ elif score <= 4:
     print("Password strength: Medium")
 else:
     print("Password strength: Strong")
+print ("Generated password:", generate_password())
