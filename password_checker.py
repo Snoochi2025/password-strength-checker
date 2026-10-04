@@ -82,7 +82,7 @@ else:
 pattern_found = any(pattern in password.lower() for pattern in common_patterns)
 
 score = 0
-
+warnings = 0
 if len(password) >= 8:
     score += 1
 
@@ -99,12 +99,16 @@ if any(char in special_characters for char in password):
     score += 1
 if pattern_found:
     score -= 1
+     warnings += 1
 if common_password:
     score -= 1
+    warnings += 1
 if personal_word_found:
     score -= 1
+    warnings += 1
 if repeated_character:
     score -= 1
+    warnings += 1
 print ("Score:", score,"/ 5")
 if score <= 2:
     print("Password strength: Weak")
