@@ -13,7 +13,7 @@ common_passwords = [
     "letmein",
     "welcome",
     "admin123",
-    "abc123"
+    "abc123",
     "pass@123"
 ]
 common_patterns = [
@@ -46,6 +46,8 @@ if len(password) >= 8:
     print("Password is long enough!")
 else:
     print("Use at least 8 characters!")
+has_number = any(char.isdigit() for char in password)
+
 if has_number:
     print("Password contains a number!")
 else:
@@ -65,7 +67,6 @@ else:
     print("Password needs a special character!")
 pattern_found = any(pattern in password.lower() for pattern in common_patterns)
 
-has_number = any(char.isdigit() for char in password)
 score = 0
 
 if len(password) >= 8:
