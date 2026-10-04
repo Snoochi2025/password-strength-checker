@@ -98,7 +98,7 @@ if pattern_found:
     score -= 1
 if common_password:
     score -= 1
-if personal_word_found
+if personal_word_found:
     score -= 1
 print ("Score:", score,"/ 5")
 if score <= 2:
