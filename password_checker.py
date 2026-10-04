@@ -61,6 +61,7 @@ if any(char in special_characters for char in password):
     print("password contains a special character")
 else:
     print("Password needs a special character!")
+pattern_found = any(pattern in password.lower() for pattern in common_patterns)
 score = 0
 
 if len(password) >= 8:
