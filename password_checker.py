@@ -66,7 +66,6 @@ else:
 pattern_found = any(pattern in password.lower() for pattern in common_patterns)
 
 has_number = any(char.isdigit() for char in password)
-
 score = 0
 
 if len(password) >= 8:
