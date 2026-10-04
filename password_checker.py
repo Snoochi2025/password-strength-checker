@@ -16,6 +16,13 @@ common_passwords = [
     "abc123"
     "pass@123"
 ]
+common_patterns = [
+    "123456",
+    "abcdef",
+    "qwerty",
+    "987654"]  
+if any(pattern in password.lower() for pattern in common_patterns):
+    print("⚠️ Warning: Your password contains a predictable pattern!")
 def generate_password(length=12):
     password = ""
 
