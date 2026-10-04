@@ -21,6 +21,17 @@ common_patterns = [
     "abcdef",
     "qwerty",
     "987654"]  
+personal_words =[ 
+    "admin",
+    "user",
+    "love",
+    "football",
+    "liverpool",
+    "password"]
+personal_word_found = any(word in password.lower() for word in personal_words)
+if personal_word_found:
+    print("Warning: Your password contains a predictable personal or common word!")
+
 if any(pattern in password.lower() for pattern in common_patterns):
     print("⚠️ Warning: Your password contains a predictable pattern!")
 def generate_password(length=12):
