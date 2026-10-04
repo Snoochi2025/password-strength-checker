@@ -78,6 +78,8 @@ if any(char.islower() for char in password):
 
 if any(char in special_characters for char in password):
     score += 1
+if pattern_found:
+    score -= 1
 print ("Score:", score,"/ 5")
 if score <= 2:
     print("Password strength: Weak")
