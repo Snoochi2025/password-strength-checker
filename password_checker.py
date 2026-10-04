@@ -17,11 +17,12 @@ common_passwords = [
     "pass@123"
 ]
 def generate_password(length=12):
-    characters = string.ascii_letters + string.digits + string.punctuation
     password = ""
 
-    for _ in range(length):
-        password += secrets.choice(characters)
+    password += secrets.choice(string.ascii_uppercase)
+    password += secrets.choice(string.ascii_lowercase)
+    password += secrets.choice(string.digits)
+    password += secrets.choice(string.punctuation)
 
     return password
 if password.lower() in common_passwords:
