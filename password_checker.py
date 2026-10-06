@@ -99,7 +99,7 @@ if any(char in special_characters for char in password):
     score += 1
 if pattern_found:
     score -= 1
-     warnings += 1
+    warnings += 1
 if common_password:
     score -= 1
     warnings += 1
