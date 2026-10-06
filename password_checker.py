@@ -110,6 +110,7 @@ if repeated_character:
     score -= 1
     warnings += 1
 print ("Score:", score,"/ 5")
+print("Security warnings:", warnings)
 if score <= 2:
     print("Password strength: Weak")
 elif score <= 4:
